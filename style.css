@@ -1,0 +1,172 @@
+/* DESIGN SYSTEM */
+:root {
+    --primary: #ffffff;
+    --secondary: #f7f8fa;
+    --accent: #00b894;
+    --text: #1f2937;
+}
+
+/* GLOBAL */
+body {
+    margin: 0;
+    font-family: "Inter", sans-serif;
+}
+
+/* NAV */
+.nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 18px 40px;
+    position: sticky;
+    top: 0;
+    background: rgba(255,255,255,0.85);
+    backdrop-filter: blur(12px);
+    border-bottom: 1px solid #eee;
+}
+
+/* LOGO */
+.logo-container {
+    display: flex;
+    flex-direction: column;
+}
+
+.logo-name {
+    font-family: "Outfit";
+    font-size: 22px;
+    font-weight: 800;
+}
+
+.logo-badge {
+    font-size: 10px;
+    color: var(--accent);
+}
+
+/* NAV */
+.nav nav {
+    display: flex;
+    gap: 8px;
+}
+
+/* NAV BUTTON STYLE (FIXED UNIFORM UI) */
+.nav nav a {
+    text-decoration: none;
+    color: var(--text);
+    padding: 8px 14px;
+    border-radius: 999px;
+    font-weight: 500;
+    transition: 0.25s;
+}
+
+.nav nav a:hover {
+    background: rgba(0,184,148,0.12);
+    color: var(--accent);
+}
+
+/* HERO */
+.hero {
+    text-align: center;
+    padding: 120px 20px;
+    background: var(--secondary);
+}
+
+.hero h1 {
+    font-family: "Outfit";
+    font-size: 56px;
+}
+
+/* PRIMARY BUTTON */
+.primary-btn {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 12px 26px;
+    background: var(--accent);
+    color: white;
+    border-radius: 12px;
+    text-decoration: none;
+}
+
+/* SECTIONS */
+.section {
+    padding: 90px 20px;
+    text-align: center;
+}
+
+.section p {
+    max-width: 750px;
+    margin: 12px auto;
+    line-height: 1.6;
+}
+
+/* SKILLS */
+.skills-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+}
+
+.pill {
+    padding: 6px 12px;
+    border-radius: 20px;
+    background: rgba(0,184,148,0.1);
+    color: var(--accent);
+}
+
+/* GRID */
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 20px;
+}
+
+/* CARD */
+.card {
+    background: white;
+    padding: 25px;
+    border-radius: 14px;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.05);
+    transition: 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-6px);
+}
+
+/* CARD BUTTON (UNIFIED SYSTEM) */
+.card-btn {
+    display: inline-block;
+    margin-top: 12px;
+    padding: 8px 14px;
+    border: 1px solid var(--accent);
+    color: var(--accent);
+    border-radius: 8px;
+    text-decoration: none;
+    transition: 0.25s;
+}
+
+.card-btn:hover {
+    background: var(--accent);
+    color: white;
+}
+
+/* FOOTER */
+footer {
+    text-align: center;
+    padding: 25px;
+    background: var(--secondary);
+}
+
+/* MOBILE */
+@media(max-width:768px){
+    .nav nav {
+        display:none;
+        flex-direction: column;
+        position:absolute;
+        right:20px;
+        top:70px;
+        background:white;
+        padding:10px;
+        border-radius:10px;
+    }
+}
