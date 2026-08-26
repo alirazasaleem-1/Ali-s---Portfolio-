@@ -11,6 +11,9 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Initialize active link highlight on scroll
     initScrollSpy();
+
+    // Fetch live GitHub metrics smoothly
+    fetchLiveGitHubStats();
 });
 
 // Toggle Mobile Menu
@@ -124,4 +127,22 @@ function initScrollSpy() {
             }
         });
     });
+}
+
+// Live GitHub Metrics Fetcher (with instant fallback resilience)
+async function fetchLiveGitHubStats() {
+    const username = 'alirazasaleem-1';
+    try {
+        const userRes = await fetch(`https://api.github.com/users/${username}`);
+        if (userRes.ok) {
+            const userData = await userRes.json();
+            const statRepos = document.getElementById('statRepos');
+            if (statRepos && userData.public_repos) {
+                statRepos.textContent = `${userData.public_repos}+`;
+            }
+        }
+    } catch (e) {
+        // Fallback already rendered in HTML
+        console.log('Using default GitHub stats cache');
+    }
 }
