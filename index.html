@@ -1,179 +1,673 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Ali Raza Saleem - AI/ML Engineer & Python Developer. Explore my machine learning projects, deep learning systems, web applications, and automation tools.">
+    <meta name="keywords" content="Ali Raza Saleem, AI Engineer, Machine Learning, Python Developer, Deep Learning, Speech Emotion Recognition, Streamlit, Flask, Automation">
+    <meta name="author" content="Ali Raza Saleem">
+    
+    <!-- Open Graph / Social Meta Tags -->
+    <meta property="og:title" content="Ali Raza Saleem | AI/ML Engineer & Python Developer">
+    <meta property="og:description" content="BS Computer Science @ UAF | Building AI Applications, Deep Learning Models, and Python Systems.">
+    <meta property="og:type" content="website">
 
-<title>Ali Raza Saleem | Python Automation Engineer</title>
+    <title>Ali Raza Saleem | AI/ML Engineer & Python Developer</title>
 
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Outfit:wght@600;800&display=swap" rel="stylesheet">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700&family=Fira+Code:wght@400;500&display=swap" rel="stylesheet">
+    
+    <!-- FontAwesome Icons for clean UI -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 
-<link rel="stylesheet" href="style.css">
+    <!-- Main Stylesheet -->
+    <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
-<!-- HEADER -->
-<header class="nav">
+    <!-- BACKGROUND GLOW EFFECTS -->
+    <div class="bg-glow bg-glow-1"></div>
+    <div class="bg-glow bg-glow-2"></div>
 
-    <div class="logo-container">
-        <span class="logo-name">ALI RAZA</span>
-        <span class="logo-badge">Python Developer</span>
-    </div>
-
-    <div class="hamburger" onclick="toggleMenu()">☰</div>
-
-    <nav id="navMenu">
-        <a href="#about">About</a>
-        <a href="#skills">Skills</a>
-        <a href="#projects">Projects</a>
-        <a href="#contact">Contact</a>
-    </nav>
-
-</header>
-
-<!-- HERO -->
-<section class="hero">
-    <h1>Python Automation & Systems Developer 🐍</h1>
-    <p>BSCS Student @ UAF | Automation • Scraping • Finance Systems 📊</p>
-
-    <a href="#projects" class="primary-btn">Explore Projects</a>
-</section>
-
-<!-- ABOUT -->
-<!-- ABOUT -->
-<section id="about" class="section">
-    <h2>About Me</h2>
-
-    <p>
-        I am Ali Raza Saleem, a BS Computer Science student at the University of Agriculture, Faisalabad.
-        I am currently focused on building strong foundations in Python programming and software development.
-    </p>
-
-    <p>
-        My main interest is in Python automation, where I build real-world systems like file organizers,
-        password managers, web scrapers, and data processing tools using Excel and APIs.
-    </p>
-
-    <p>
-        I believe in learning by building practical projects, improving efficiency through automation,
-        and developing skills that can lead to long-term financial independence.
-    </p>
-</section>
-
-<!-- SKILLS -->
-<section id="skills" class="section">
-    <h2>Skills</h2>
-
-    <div class="skills-container">
-        <span class="pill">Python</span>
-        <span class="pill">Automation</span>
-        <span class="pill">APIs</span>
-        <span class="pill">Web Scraping</span>
-        <span class="pill">Excel</span>
-    </div>
-</section>
-
-<!-- PROJECTS -->
-<section id="projects" class="section">
-    <h2>Projects</h2>
-
-    <div class="grid">
-
-        <!-- CARD -->
-        <article class="card">
-            <h3>Quiz Game</h3>
-            <p>CLI-based Python logic system.</p>
-
-            <a class="card-btn" target="_blank"
-            href="https://github.com/alirazasaleem-1/Python-Projects/blob/main/Computer%20Quiz%20Game.py">
-            View Project
+    <!-- NAVBAR -->
+    <header class="navbar" id="navbar">
+        <div class="nav-container">
+            <a href="#" class="logo">
+                <div class="logo-text">
+                    <span class="logo-name">ALI RAZA</span>
+                    <span class="logo-badge"><span class="pulse-dot"></span> AI & Python Engineer</span>
+                </div>
             </a>
-        </article>
 
-        <article class="card">
-            <h3>Daily Tracker</h3>
-            <p>Productivity system using JSON + Excel.</p>
+            <button class="hamburger" id="hamburger" aria-label="Toggle navigation menu" onclick="toggleMenu()">
+                <i class="fa-solid fa-bars"></i>
+            </button>
 
-            <a class="card-btn" target="_blank"
-            href="https://github.com/alirazasaleem-1/Python-Projects/blob/main/Daily%20Life%20Tracker.py">
-            View Project
-            </a>
-        </article>
+            <nav class="nav-menu" id="navMenu">
+                <a href="#about" class="nav-link">About</a>
+                <a href="#experience" class="nav-link">Experience</a>
+                <a href="#skills" class="nav-link">Skills</a>
+                <a href="#projects" class="nav-link">Projects</a>
+                <a href="#stats" class="nav-link">Activity</a>
+                <a href="#contact" class="nav-link">Contact</a>
+                <a href="https://github.com/alirazasaleem-1" target="_blank" rel="noopener noreferrer" class="nav-cta-btn">
+                    <i class="fa-brands fa-github"></i> GitHub
+                </a>
+            </nav>
+        </div>
+    </header>
 
-        <article class="card">
-            <h3>Expense Tracker</h3>
-            <p>Financial management automation tool.</p>
+    <main>
+        <!-- HERO SECTION -->
+        <section class="hero" id="home">
+            <div class="container hero-container">
+                <div class="hero-content">
+                    <div class="status-pill">
+                        <span class="pulse-dot"></span> Available for AI/ML & Python roles
+                    </div>
+                    
+                    <h1 class="hero-title">
+                        Building Intelligent <span class="gradient-text">AI Systems</span> & Python Solutions
+                    </h1>
+                    
+                    <p class="hero-subtitle">
+                        Hi, I'm <strong>Ali Raza Saleem</strong>. BS Computer Science student at <strong>University of Agriculture Faisalabad (UAF)</strong> & former <strong>Machine Learning Intern at CodeAlpha</strong>. Passionate about Deep Learning, GenAI applications, and end-to-end software automation.
+                    </p>
 
-            <a class="card-btn" target="_blank"
-            href="https://github.com/alirazasaleem-1/Python-Projects/blob/main/Expense%20Tracker.py">
-            View Project
-            </a>
-        </article>
+                    <div class="hero-actions">
+                        <a href="#projects" class="btn btn-primary">
+                            <span>Explore Projects</span>
+                            <i class="fa-solid fa-arrow-down"></i>
+                        </a>
+                        <a href="#contact" class="btn btn-secondary">
+                            <span>Get in Touch</span>
+                            <i class="fa-regular fa-paper-plane"></i>
+                        </a>
+                    </div>
 
-        <article class="card">
-            <h3>Password Manager</h3>
-            <p>Encrypted password storage system.</p>
+                    <!-- SOCIAL QUICK ICONS -->
+                    <div class="hero-socials">
+                        <a href="https://github.com/alirazasaleem-1" target="_blank" rel="noopener noreferrer" title="GitHub" aria-label="GitHub">
+                            <i class="fa-brands fa-github"></i>
+                        </a>
+                        <a href="https://www.linkedin.com/in/alirazasaleem-cs/" target="_blank" rel="noopener noreferrer" title="LinkedIn" aria-label="LinkedIn">
+                            <i class="fa-brands fa-linkedin-in"></i>
+                        </a>
+                        <a href="https://alirazasaleem099.substack.com/" target="_blank" rel="noopener noreferrer" title="Substack" aria-label="Substack">
+                            <i class="fa-solid fa-newspaper"></i>
+                        </a>
+                        <a href="https://x.com/AliRazaCreates" target="_blank" rel="noopener noreferrer" title="X (Twitter)" aria-label="X Twitter">
+                            <i class="fa-brands fa-x-twitter"></i>
+                        </a>
+                        <a href="mailto:alirazasaleem099@gmail.com" title="Email" aria-label="Email">
+                            <i class="fa-solid fa-envelope"></i>
+                        </a>
+                    </div>
+                </div>
 
-            <a class="card-btn" target="_blank"
-            href="https://github.com/alirazasaleem-1/Python-Projects/blob/main/Password%20Manager.py">
-            View Project
-            </a>
-        </article>
+                <!-- HERO AVATAR / PROFILE CARD -->
+                <div class="hero-avatar-wrapper">
+                    <div class="avatar-card">
+                        <div class="avatar-frame">
+                            <img src="assets/profile.jpg" alt="Ali Raza Saleem" id="profileImg" onerror="this.onerror=null; this.src='https://avatars.githubusercontent.com/u/231023794?v=4';">
+                        </div>
+                        <div class="avatar-info">
+                            <h2 class="avatar-name">Ali Raza Saleem</h2>
+                            <p class="avatar-role">AI / ML Engineer & Python Developer</p>
+                            <div class="avatar-tags">
+                                <span class="tag">UAF 🇵🇰</span>
+                                <span class="tag">CodeAlpha ML Intern</span>
+                            </div>
+                        </div>
+                        <div class="avatar-quote">
+                            <em>"Learn → Build → Share → Improve → Repeat 🔁"</em>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
 
-        <article class="card">
-            <h3>File Organizer</h3>
-            <p>Automated file sorting system.</p>
+        <!-- ABOUT SECTION -->
+        <section class="section about-section" id="about">
+            <div class="container">
+                <div class="section-header">
+                    <span class="section-tag">Introduction</span>
+                    <h2 class="section-title">About Me</h2>
+                    <div class="section-line"></div>
+                </div>
 
-            <a class="card-btn" target="_blank"
-            href="https://github.com/alirazasaleem-1/Python-Projects/blob/main/Smart%20File%20Organizer.py">
-            View Project
-            </a>
-        </article>
+                <div class="about-grid">
+                    <div class="about-text-card">
+                        <p>
+                            I am a Computer Science student at the <strong>University of Agriculture, Faisalabad</strong> with a strong focus on <strong>Artificial Intelligence, Deep Learning, and Python Automation</strong>.
+                        </p>
+                        <p>
+                            Over the course of my journey, I have engineered full-cycle machine learning pipelines—from exploratory data analysis and feature engineering to deploying interactive Streamlit and Flask applications.
+                        </p>
+                        <p>
+                            Whether building a <strong>Speech Emotion Recognition</strong> neural network, creating an <strong>AI Job Application Copilot</strong> powered by Gemini AI, or designing real-world automation tools, my philosophy remains constant: <em>deliver clean, efficient, and impactful solutions</em>.
+                        </p>
+                    </div>
 
-        <article class="card">
-            <h3>Weather API</h3>
-            <p>Live weather data automation system.</p>
+                    <div class="about-highlights-grid">
+                        <div class="highlight-box">
+                            <div class="highlight-icon"><i class="fa-solid fa-brain"></i></div>
+                            <h3>AI & Deep Learning</h3>
+                            <p>Convolutional Neural Networks (CNNs), Audio MFCC Feature Extraction & Gemini GenAI.</p>
+                        </div>
+                        <div class="highlight-box">
+                            <div class="highlight-icon"><i class="fa-solid fa-chart-line"></i></div>
+                            <h3>End-to-End ML Pipelines</h3>
+                            <p>Supervised classification, credit scoring models, data wrangling, and predictive systems.</p>
+                        </div>
+                        <div class="highlight-box">
+                            <div class="highlight-icon"><i class="fa-solid fa-bolt"></i></div>
+                            <h3>Python & Web Automation</h3>
+                            <p>Streamlit apps, Flask web services, web scraping engines, and OS file organizers.</p>
+                        </div>
+                        <div class="highlight-box">
+                            <div class="highlight-icon"><i class="fa-solid fa-code-branch"></i></div>
+                            <h3>Learning in Public</h3>
+                            <p>18+ repositories, open-source projects, and technical writing on Substack.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
 
-            <a class="card-btn" target="_blank"
-            href="https://github.com/alirazasaleem-1/Python-Projects/blob/main/Weather%20API%20System.py">
-            View Project
-            </a>
-        </article>
+        <!-- EXPERIENCE & EDUCATION SECTION -->
+        <section class="section experience-section" id="experience">
+            <div class="container">
+                <div class="section-header">
+                    <span class="section-tag">Journey</span>
+                    <h2 class="section-title">Experience & Education</h2>
+                    <div class="section-line"></div>
+                </div>
 
-        <article class="card">
-            <h3>BBC Scraper</h3>
-            <p>News headline extraction system.</p>
+                <div class="timeline">
+                    <!-- TIMELINE ITEM 1 -->
+                    <div class="timeline-item">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-card">
+                            <div class="timeline-header">
+                                <div>
+                                    <h3 class="timeline-role">Machine Learning Intern</h3>
+                                    <h4 class="timeline-org">CodeAlpha</h4>
+                                </div>
+                                <span class="timeline-date"><i class="fa-regular fa-calendar"></i> 2026</span>
+                            </div>
+                            <p class="timeline-desc">
+                                Built real-world Machine Learning & Deep Learning projects following end-to-end engineering workflows:
+                            </p>
+                            <ul class="timeline-list">
+                                <li>Developed a <strong>Speech Emotion Recognition (SER)</strong> model using CNNs and MFCC audio processing on the RAVDESS dataset with a live Streamlit app.</li>
+                                <li>Engineered a comprehensive <strong>Credit Scoring Model</strong> classifying loan default risk on 32,000+ records with EDA and median imputation.</li>
+                            </ul>
+                            <div class="timeline-tags">
+                                <span>Deep Learning</span>
+                                <span>CNN</span>
+                                <span>MFCC</span>
+                                <span>Scikit-Learn</span>
+                                <span>Streamlit</span>
+                            </div>
+                        </div>
+                    </div>
 
-            <a class="card-btn" target="_blank"
-            href="https://github.com/alirazasaleem-1/Python-Projects/blob/main/Web%20Scraper%20(BBC%20News).py">
-            View Project
-            </a>
-        </article>
+                    <!-- TIMELINE ITEM 2 -->
+                    <div class="timeline-item">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-card">
+                            <div class="timeline-header">
+                                <div>
+                                    <h3 class="timeline-role">Bachelor of Science in Computer Science (BS CS)</h3>
+                                    <h4 class="timeline-org">University of Agriculture, Faisalabad (UAF)</h4>
+                                </div>
+                                <span class="timeline-date"><i class="fa-regular fa-calendar"></i> In Progress</span>
+                            </div>
+                            <p class="timeline-desc">
+                                Rigorous coursework in Object-Oriented Programming, Data Structures & Algorithms, Database Systems, Operating Systems, and Applied Artificial Intelligence.
+                            </p>
+                            <div class="timeline-tags">
+                                <span>Python</span>
+                                <span>OOP</span>
+                                <span>DSA</span>
+                                <span>Database Systems</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
 
-        <article class="card">
-            <h3>Life Energy Dashbaord</h3>
-            <p>Python System to track study, sleep, phone usage & productivity</p>
+        <!-- SKILLS SECTION -->
+        <section class="section skills-section" id="skills">
+            <div class="container">
+                <div class="section-header">
+                    <span class="section-tag">Tech Stack</span>
+                    <h2 class="section-title">Skills & Technologies</h2>
+                    <div class="section-line"></div>
+                </div>
 
-            <a class="card-btn" target="_blank"
-            href="https://github.com/alirazasaleem-1/Python-Projects/blob/main/Life%20Energy%20Dashboard.py">
-            View Project
-            </a>
-        </article>
+                <div class="skills-grid">
+                    <!-- SKILL CATEGORY 1 -->
+                    <div class="skill-category-card">
+                        <div class="skill-cat-header">
+                            <i class="fa-solid fa-robot"></i>
+                            <h3>AI & Deep Learning</h3>
+                        </div>
+                        <div class="skill-pills">
+                            <span class="pill"><i class="fa-solid fa-microchip"></i> Deep Learning</span>
+                            <span class="pill"><i class="fa-solid fa-network-wired"></i> CNNs</span>
+                            <span class="pill"><i class="fa-solid fa-wave-square"></i> MFCC Audio Analysis</span>
+                            <span class="pill"><i class="fa-solid fa-wand-magic-sparkles"></i> Google Gemini AI</span>
+                            <span class="pill"><i class="fa-solid fa-cube"></i> TensorFlow / Keras</span>
+                            <span class="pill"><i class="fa-solid fa-music"></i> Librosa</span>
+                        </div>
+                    </div>
 
-    </div>
-</section>
+                    <!-- SKILL CATEGORY 2 -->
+                    <div class="skill-category-card">
+                        <div class="skill-cat-header">
+                            <i class="fa-solid fa-chart-pie"></i>
+                            <h3>Machine Learning & Data</h3>
+                        </div>
+                        <div class="skill-pills">
+                            <span class="pill"><i class="fa-solid fa-gears"></i> Scikit-Learn</span>
+                            <span class="pill"><i class="fa-solid fa-table"></i> Pandas</span>
+                            <span class="pill"><i class="fa-solid fa-calculator"></i> NumPy</span>
+                            <span class="pill"><i class="fa-solid fa-filter"></i> Data Preprocessing</span>
+                            <span class="pill"><i class="fa-solid fa-chart-column"></i> Exploratory Data Analysis</span>
+                            <span class="pill"><i class="fa-solid fa-magnifying-glass-chart"></i> Feature Engineering</span>
+                        </div>
+                    </div>
 
-<!-- CONTACT -->
-<section id="contact" class="section">
-    <h2>Contact</h2>
-    <p>📧 alirazasaleem099@gmail.com</p>
-</section>
+                    <!-- SKILL CATEGORY 3 -->
+                    <div class="skill-category-card">
+                        <div class="skill-cat-header">
+                            <i class="fa-brands fa-python"></i>
+                            <h3>Python & Web Frameworks</h3>
+                        </div>
+                        <div class="skill-pills">
+                            <span class="pill"><i class="fa-brands fa-python"></i> Python 3</span>
+                            <span class="pill"><i class="fa-solid fa-desktop"></i> Streamlit</span>
+                            <span class="pill"><i class="fa-solid fa-server"></i> Flask</span>
+                            <span class="pill"><i class="fa-solid fa-spider"></i> BeautifulSoup4</span>
+                            <span class="pill"><i class="fa-solid fa-globe"></i> Requests & REST APIs</span>
+                            <span class="pill"><i class="fa-brands fa-html5"></i> HTML5 / CSS3 / JS</span>
+                        </div>
+                    </div>
 
-<footer>
-    Built with discipline 💻 by Ali Raza 🚀
-</footer>
+                    <!-- SKILL CATEGORY 4 -->
+                    <div class="skill-category-card">
+                        <div class="skill-cat-header">
+                            <i class="fa-solid fa-toolbox"></i>
+                            <h3>Tools & Engineering Workflow</h3>
+                        </div>
+                        <div class="skill-pills">
+                            <span class="pill"><i class="fa-brands fa-git-alt"></i> Git</span>
+                            <span class="pill"><i class="fa-brands fa-github"></i> GitHub</span>
+                            <span class="pill"><i class="fa-solid fa-terminal"></i> VS Code & CLI</span>
+                            <span class="pill"><i class="fa-solid fa-book-open"></i> Jupyter Notebooks</span>
+                            <span class="pill"><i class="fa-solid fa-file-code"></i> JSON & Excel Automation</span>
+                            <span class="pill"><i class="fa-solid fa-box-archive"></i> Virtual Environments</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
 
-<script src="script.js"></script>
+        <!-- PROJECTS SECTION -->
+        <section class="section projects-section" id="projects">
+            <div class="container">
+                <div class="section-header">
+                    <span class="section-tag">Portfolio</span>
+                    <h2 class="section-title">Featured Projects</h2>
+                    <p class="section-subtitle">Real-world AI tools, deep learning models, and automated software systems built by me.</p>
+                    <div class="section-line"></div>
+                </div>
+
+                <!-- PROJECT FILTER BUTTONS -->
+                <div class="filter-container">
+                    <button class="filter-btn active" data-filter="all" onclick="filterProjects('all')">All Projects</button>
+                    <button class="filter-btn" data-filter="ai-ml" onclick="filterProjects('ai-ml')">AI & Machine Learning</button>
+                    <button class="filter-btn" data-filter="web-apps" onclick="filterProjects('web-apps')">Web Applications</button>
+                    <button class="filter-btn" data-filter="automation" onclick="filterProjects('automation')">Automation & Systems</button>
+                </div>
+
+                <!-- PROJECTS GRID -->
+                <div class="projects-grid" id="projectsGrid">
+
+                    <!-- PROJECT 1: AI JOB APPLICATION COPILOT -->
+                    <article class="project-card featured" data-category="ai-ml web-apps">
+                        <div class="card-badge-row">
+                            <span class="card-badge featured-badge"><i class="fa-solid fa-star"></i> Featured</span>
+                            <span class="card-badge live-badge"><span class="pulse-dot"></span> Live App</span>
+                        </div>
+                        <div class="card-body">
+                            <div class="card-icon"><i class="fa-solid fa-file-invoice"></i></div>
+                            <h3 class="card-title">AI Job Application Copilot</h3>
+                            <p class="card-desc">
+                                An intelligent resume analysis platform powered by Google Gemini AI and Streamlit. Evaluates resume compatibility against job descriptions, computes ATS scores, highlights missing skills, and generates tailored interview questions.
+                            </p>
+                            <div class="card-tags">
+                                <span class="tag">Python</span>
+                                <span class="tag">Google Gemini AI</span>
+                                <span class="tag">Streamlit</span>
+                                <span class="tag">PyPDF</span>
+                                <span class="tag">JSON</span>
+                            </div>
+                        </div>
+                        <div class="card-footer">
+                            <a href="https://ai-job-application-copilot-nstaz4xyxukezxvqgezxyb.streamlit.app/" target="_blank" rel="noopener noreferrer" class="btn btn-card-primary">
+                                <i class="fa-solid fa-arrow-up-right-from-square"></i> Live Demo
+                            </a>
+                            <a href="https://github.com/alirazasaleem-1/ai-job-application-copilot" target="_blank" rel="noopener noreferrer" class="btn btn-card-secondary">
+                                <i class="fa-brands fa-github"></i> GitHub
+                            </a>
+                        </div>
+                    </article>
+
+                    <!-- PROJECT 2: SPEECH EMOTION RECOGNITION -->
+                    <article class="project-card featured" data-category="ai-ml web-apps">
+                        <div class="card-badge-row">
+                            <span class="card-badge featured-badge"><i class="fa-solid fa-brain"></i> Deep Learning</span>
+                            <span class="card-badge live-badge"><span class="pulse-dot"></span> Live App</span>
+                        </div>
+                        <div class="card-body">
+                            <div class="card-icon"><i class="fa-solid fa-microphone-lines"></i></div>
+                            <h3 class="card-title">Speech Emotion Recognition (SER)</h3>
+                            <p class="card-desc">
+                                Deep Learning system classifying human emotions (Angry, Happy, Sad, Neutral, Calm, Fear, Disgust, Surprise) from speech recordings using CNNs and MFCC audio feature extraction on the RAVDESS dataset with an interactive Streamlit UI.
+                            </p>
+                            <div class="card-tags">
+                                <span class="tag">Python</span>
+                                <span class="tag">CNNs</span>
+                                <span class="tag">MFCC</span>
+                                <span class="tag">Librosa</span>
+                                <span class="tag">TensorFlow/Keras</span>
+                                <span class="tag">Streamlit</span>
+                            </div>
+                        </div>
+                        <div class="card-footer">
+                            <a href="https://codealphaspeechemotionrecognition-sipj33pveheg9cgniu9lsw.streamlit.app/" target="_blank" rel="noopener noreferrer" class="btn btn-card-primary">
+                                <i class="fa-solid fa-arrow-up-right-from-square"></i> Live Demo
+                            </a>
+                            <a href="https://youtu.be/31trFu4E1-c" target="_blank" rel="noopener noreferrer" class="btn btn-card-alt" title="Watch Demo Video">
+                                <i class="fa-brands fa-youtube"></i> Video
+                            </a>
+                            <a href="https://github.com/alirazasaleem-1/CodeAlpha_SpeechEmotionRecognition" target="_blank" rel="noopener noreferrer" class="btn btn-card-secondary">
+                                <i class="fa-brands fa-github"></i> GitHub
+                            </a>
+                        </div>
+                    </article>
+
+                    <!-- PROJECT 3: CREDIT SCORING MODEL -->
+                    <article class="project-card" data-category="ai-ml">
+                        <div class="card-badge-row">
+                            <span class="card-badge ml-badge"><i class="fa-solid fa-chart-line"></i> Machine Learning</span>
+                        </div>
+                        <div class="card-body">
+                            <div class="card-icon"><i class="fa-solid fa-credit-card"></i></div>
+                            <h3 class="card-title">Credit Scoring ML Model</h3>
+                            <p class="card-desc">
+                                Supervised classification system predicting loan default risk across 32,000+ applicants. Built with end-to-end data cleaning, median-by-group imputation, outlier handling, categorical encoding, and model performance analysis.
+                            </p>
+                            <div class="card-tags">
+                                <span class="tag">Python</span>
+                                <span class="tag">Scikit-learn</span>
+                                <span class="tag">Pandas</span>
+                                <span class="tag">EDA</span>
+                                <span class="tag">Data Cleaning</span>
+                            </div>
+                        </div>
+                        <div class="card-footer">
+                            <a href="https://github.com/alirazasaleem-1/CodeAlpha_CreditScoringModel" target="_blank" rel="noopener noreferrer" class="btn btn-card-secondary">
+                                <i class="fa-brands fa-github"></i> GitHub Repository
+                            </a>
+                        </div>
+                    </article>
+
+                    <!-- PROJECT 4: CAMPUS-KIT -->
+                    <article class="project-card" data-category="web-apps">
+                        <div class="card-badge-row">
+                            <span class="card-badge web-badge"><i class="fa-solid fa-server"></i> Full-Stack Web</span>
+                        </div>
+                        <div class="card-body">
+                            <div class="card-icon"><i class="fa-solid fa-graduation-cap"></i></div>
+                            <h3 class="card-title">Campus-Kit Student Portal</h3>
+                            <p class="card-desc">
+                                A comprehensive multi-module campus utilities web application built with Python Flask, dynamic Jinja2 templates, structured JSON activity persistence, and responsive UI components for student productivity.
+                            </p>
+                            <div class="card-tags">
+                                <span class="tag">Python</span>
+                                <span class="tag">Flask</span>
+                                <span class="tag">HTML5</span>
+                                <span class="tag">CSS3</span>
+                                <span class="tag">JavaScript</span>
+                            </div>
+                        </div>
+                        <div class="card-footer">
+                            <a href="https://github.com/alirazasaleem-1/Campus-Kit" target="_blank" rel="noopener noreferrer" class="btn btn-card-secondary">
+                                <i class="fa-brands fa-github"></i> GitHub Repository
+                            </a>
+                        </div>
+                    </article>
+
+                    <!-- PROJECT 5: FESCO BILL ANALYZER -->
+                    <article class="project-card" data-category="web-apps automation">
+                        <div class="card-badge-row">
+                            <span class="card-badge scrape-badge"><i class="fa-solid fa-bolt"></i> Web Scraping</span>
+                        </div>
+                        <div class="card-body">
+                            <div class="card-icon"><i class="fa-solid fa-receipt"></i></div>
+                            <h3 class="card-title">FESCO Electricity Bill Analyzer</h3>
+                            <p class="card-desc">
+                                Automated billing information scraper and parsing tool that queries live utility data via reference number, extracts charges, units, and dates, presenting them through an intuitive Streamlit interface.
+                            </p>
+                            <div class="card-tags">
+                                <span class="tag">Python</span>
+                                <span class="tag">Streamlit</span>
+                                <span class="tag">BeautifulSoup4</span>
+                                <span class="tag">Requests</span>
+                            </div>
+                        </div>
+                        <div class="card-footer">
+                            <a href="https://github.com/alirazasaleem-1/fesco-bill-analyzer" target="_blank" rel="noopener noreferrer" class="btn btn-card-secondary">
+                                <i class="fa-brands fa-github"></i> GitHub Repository
+                            </a>
+                        </div>
+                    </article>
+
+                    <!-- PROJECT 6: GITHUB PROFILE ANALYZER -->
+                    <article class="project-card" data-category="automation">
+                        <div class="card-badge-row">
+                            <span class="card-badge api-badge"><i class="fa-solid fa-code"></i> API & Insights</span>
+                        </div>
+                        <div class="card-body">
+                            <div class="card-icon"><i class="fa-solid fa-chart-column"></i></div>
+                            <h3 class="card-title">GitHub Profile Analyzer</h3>
+                            <p class="card-desc">
+                                Analytics tool utilizing the GitHub REST API and regex to evaluate profile stats, calculate coding streaks, analyze repository language breakdown, and deliver personalized learning roadmap suggestions.
+                            </p>
+                            <div class="card-tags">
+                                <span class="tag">Python</span>
+                                <span class="tag">GitHub REST API</span>
+                                <span class="tag">Regex</span>
+                                <span class="tag">Requests</span>
+                            </div>
+                        </div>
+                        <div class="card-footer">
+                            <a href="https://github.com/alirazasaleem-1/github-profile-analyzer" target="_blank" rel="noopener noreferrer" class="btn btn-card-secondary">
+                                <i class="fa-brands fa-github"></i> GitHub Repository
+                            </a>
+                        </div>
+                    </article>
+
+                    <!-- PROJECT 7: AUTOMATION & SYSTEMS SUITE -->
+                    <article class="project-card" data-category="automation">
+                        <div class="card-badge-row">
+                            <span class="card-badge auto-badge"><i class="fa-solid fa-gears"></i> Automation Suite</span>
+                        </div>
+                        <div class="card-body">
+                            <div class="card-icon"><i class="fa-solid fa-folder-tree"></i></div>
+                            <h3 class="card-title">Python Automation & Systems Suite</h3>
+                            <p class="card-desc">
+                                Collection of real-world automation utilities including a Smart File Organizer, CLI Expense & Life Energy Tracker, Weather API system, BBC News scraper, and secure Password Manager.
+                            </p>
+                            <div class="card-tags">
+                                <span class="tag">Python</span>
+                                <span class="tag">File Systems</span>
+                                <span class="tag">APIs</span>
+                                <span class="tag">Excel & JSON</span>
+                            </div>
+                        </div>
+                        <div class="card-footer">
+                            <a href="https://github.com/alirazasaleem-1/AI-Engineering-Projects" target="_blank" rel="noopener noreferrer" class="btn btn-card-primary">
+                                <i class="fa-brands fa-github"></i> AI Engineering Suite
+                            </a>
+                            <a href="https://github.com/alirazasaleem-1/Python-Projects" target="_blank" rel="noopener noreferrer" class="btn btn-card-secondary">
+                                <i class="fa-brands fa-github"></i> Python Projects
+                            </a>
+                        </div>
+                    </article>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- GITHUB STATS & ACTIVITY SECTION -->
+        <section class="section stats-section" id="stats">
+            <div class="container">
+                <div class="section-header">
+                    <span class="section-tag">Open Source</span>
+                    <h2 class="section-title">GitHub Activity & Stats</h2>
+                    <p class="section-subtitle">Consistent coding, continuous learning, and sharing projects publicly.</p>
+                    <div class="section-line"></div>
+                </div>
+
+                <div class="stats-grid">
+                    <div class="stats-card">
+                        <a href="https://github.com/alirazasaleem-1" target="_blank" rel="noopener noreferrer">
+                            <img class="stats-img" 
+                                 src="https://github-readme-stats.vercel.app/api?username=alirazasaleem-1&show_icons=true&theme=tokyonight&hide_border=true&bg_color=161b22&title_color=00b894&icon_color=00b894&text_color=c9d1d9" 
+                                 alt="Ali Raza Saleem GitHub Stats" 
+                                 loading="lazy">
+                        </a>
+                    </div>
+                    <div class="stats-card">
+                        <a href="https://github.com/alirazasaleem-1" target="_blank" rel="noopener noreferrer">
+                            <img class="stats-img" 
+                                 src="https://streak-stats.vercel.app/?user=alirazasaleem-1&theme=tokyonight&hide_border=true&border_radius=12&background=161b22&ring=00b894&fire=00b894&currStreakNum=00b894" 
+                                 alt="Ali Raza Saleem GitHub Streak" 
+                                 loading="lazy">
+                        </a>
+                    </div>
+                    <div class="stats-card">
+                        <a href="https://github.com/alirazasaleem-1" target="_blank" rel="noopener noreferrer">
+                            <img class="stats-img" 
+                                 src="https://github-readme-stats.vercel.app/api/top-langs/?username=alirazasaleem-1&layout=compact&theme=tokyonight&hide_border=true&bg_color=161b22&title_color=00b894&text_color=c9d1d9" 
+                                 alt="Ali Raza Saleem Top Languages" 
+                                 loading="lazy">
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CONTACT SECTION -->
+        <section class="section contact-section" id="contact">
+            <div class="container">
+                <div class="section-header">
+                    <span class="section-tag">Get in Touch</span>
+                    <h2 class="section-title">Let's Connect & Collaborate</h2>
+                    <p class="section-subtitle">Interested in collaborating on AI/ML projects or discussing Python opportunities? Let's connect!</p>
+                    <div class="section-line"></div>
+                </div>
+
+                <div class="contact-wrapper">
+                    <!-- EMAIL CARD -->
+                    <div class="contact-card email-card">
+                        <div class="contact-icon"><i class="fa-solid fa-envelope"></i></div>
+                        <div class="contact-details">
+                            <h3>Email Me</h3>
+                            <p id="emailText">alirazasaleem099@gmail.com</p>
+                        </div>
+                        <div class="email-actions">
+                            <button class="btn btn-sm btn-outline" id="copyEmailBtn" onclick="copyEmail()">
+                                <i class="fa-regular fa-copy" id="copyIcon"></i> <span id="copyText">Copy</span>
+                            </button>
+                            <a href="mailto:alirazasaleem099@gmail.com" class="btn btn-sm btn-primary">
+                                <i class="fa-solid fa-paper-plane"></i> Send Email
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- SOCIAL BADGES GRID -->
+                    <div class="social-badges-grid">
+                        <a href="https://www.linkedin.com/in/alirazasaleem-cs/" target="_blank" rel="noopener noreferrer" class="social-badge linkedin">
+                            <i class="fa-brands fa-linkedin-in"></i>
+                            <div class="social-info">
+                                <strong>LinkedIn</strong>
+                                <span>alirazasaleem-cs</span>
+                            </div>
+                            <i class="fa-solid fa-arrow-up-right-from-square arrow-icon"></i>
+                        </a>
+
+                        <a href="https://github.com/alirazasaleem-1" target="_blank" rel="noopener noreferrer" class="social-badge github">
+                            <i class="fa-brands fa-github"></i>
+                            <div class="social-info">
+                                <strong>GitHub</strong>
+                                <span>alirazasaleem-1</span>
+                            </div>
+                            <i class="fa-solid fa-arrow-up-right-from-square arrow-icon"></i>
+                        </a>
+
+                        <a href="https://alirazasaleem099.substack.com/" target="_blank" rel="noopener noreferrer" class="social-badge substack">
+                            <i class="fa-solid fa-newspaper"></i>
+                            <div class="social-info">
+                                <strong>Substack</strong>
+                                <span>alirazasaleem099</span>
+                            </div>
+                            <i class="fa-solid fa-arrow-up-right-from-square arrow-icon"></i>
+                        </a>
+
+                        <a href="https://x.com/AliRazaCreates" target="_blank" rel="noopener noreferrer" class="social-badge twitter">
+                            <i class="fa-brands fa-x-twitter"></i>
+                            <div class="social-info">
+                                <strong>X (Twitter)</strong>
+                                <span>@AliRazaCreates</span>
+                            </div>
+                            <i class="fa-solid fa-arrow-up-right-from-square arrow-icon"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <div class="container footer-container">
+            <div class="footer-left">
+                <span class="footer-logo">ALI RAZA SALEEM</span>
+                <p>Python Automation & AI/ML Engineer • Built with discipline 💻</p>
+            </div>
+            <div class="footer-links">
+                <a href="#about">About</a>
+                <a href="#projects">Projects</a>
+                <a href="#skills">Skills</a>
+                <a href="#contact">Contact</a>
+            </div>
+            <div class="footer-copy">
+                &copy; <span id="yearSpan">2026</span> Ali Raza Saleem. All rights reserved.
+            </div>
+        </div>
+    </footer>
+
+    <!-- JAVASCRIPT -->
+    <script src="script.js"></script>
 </body>
 </html>
