@@ -14,6 +14,9 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Fetch live GitHub metrics smoothly
     fetchLiveGitHubStats();
+
+    // Initialize entrance animations on scroll
+    initScrollAnimations();
 });
 
 // Toggle Mobile Menu
@@ -110,7 +113,7 @@ function initScrollSpy() {
 
     window.addEventListener('scroll', () => {
         let currentSection = '';
-        const scrollPosition = window.pageYOffset + 200;
+        const scrollPosition = (window.scrollY || window.pageYOffset || 0) + 200;
 
         sections.forEach(section => {
             const sectionTop = section.offsetTop;
@@ -126,7 +129,32 @@ function initScrollSpy() {
                 link.classList.add('active');
             }
         });
-    });
+    }, { passive: true });
+}
+
+// Scroll Entrance Animations with IntersectionObserver
+function initScrollAnimations() {
+    const animatedElements = document.querySelectorAll('.animate-on-scroll');
+    if (!animatedElements.length) return;
+
+    if ('IntersectionObserver' in window) {
+        const observer = new IntersectionObserver((entries, obs) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                    obs.unobserve(entry.target);
+                }
+            });
+        }, {
+            threshold: 0.1,
+            rootMargin: '0px 0px -40px 0px'
+        });
+
+        animatedElements.forEach(el => observer.observe(el));
+    } else {
+        // Fallback for older browsers
+        animatedElements.forEach(el => el.classList.add('visible'));
+    }
 }
 
 // Live GitHub Metrics Fetcher (with instant fallback resilience)

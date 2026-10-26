@@ -1036,7 +1036,7 @@ h1, h2, h3, h4, h5, h6 {
     border: 1px solid rgba(9, 132, 227, 0.35);
 }
 
-.ml-badge, .web-badge, .scrape-badge, .api-badge, .auto-badge {
+.ml-badge, .web-badge, .scrape-badge, .api-badge, .auto-badge, .oop-badge, .biz-badge, .intern-badge {
     background: rgba(255, 255, 255, 0.05);
     color: var(--text-secondary);
     border: 1px solid var(--border-color);
@@ -1597,6 +1597,63 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 /* Small Mobile Phones (< 480px) */
+/* -----------------------------
+   SCROLL ANIMATIONS
+   ----------------------------- */
+.animate-on-scroll {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.6s cubic-bezier(0.16, 1, 0.3, 1),
+                transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.animate-on-scroll.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Stagger children delays */
+.animate-on-scroll:nth-child(2) { transition-delay: 0.1s; }
+.animate-on-scroll:nth-child(3) { transition-delay: 0.2s; }
+.animate-on-scroll:nth-child(4) { transition-delay: 0.25s; }
+.animate-on-scroll:nth-child(5) { transition-delay: 0.3s; }
+.animate-on-scroll:nth-child(6) { transition-delay: 0.35s; }
+.animate-on-scroll:nth-child(7) { transition-delay: 0.4s; }
+.animate-on-scroll:nth-child(8) { transition-delay: 0.45s; }
+.animate-on-scroll:nth-child(9) { transition-delay: 0.5s; }
+.animate-on-scroll:nth-child(10) { transition-delay: 0.55s; }
+.animate-on-scroll:nth-child(11) { transition-delay: 0.6s; }
+
+/* Card gradient header banners */
+.card-banner {
+    height: 6px;
+    border-radius: 18px 18px 0 0;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+}
+
+.card-banner.banner-ai      { background: linear-gradient(90deg, #00b894, #0984e3); }
+.card-banner.banner-dl      { background: linear-gradient(90deg, #6c5ce7, #a29bfe); }
+.card-banner.banner-ml      { background: linear-gradient(90deg, #0984e3, #74b9ff); }
+.card-banner.banner-web     { background: linear-gradient(90deg, #f59e0b, #fdcb6e); }
+.card-banner.banner-scrape  { background: linear-gradient(90deg, #e17055, #fab1a0); }
+.card-banner.banner-api     { background: linear-gradient(90deg, #00cec9, #81ecec); }
+.card-banner.banner-auto    { background: linear-gradient(90deg, #636e72, #b2bec3); }
+.card-banner.banner-oop     { background: linear-gradient(90deg, #fd79a8, #e84393); }
+.card-banner.banner-biz     { background: linear-gradient(90deg, #f39c12, #e74c3c); }
+.card-banner.banner-intern  { background: linear-gradient(90deg, #00b894, #6c5ce7); }
+
+/* Accessible reduced motion support */
+@media (prefers-reduced-motion: reduce) {
+    .animate-on-scroll {
+        opacity: 1 !important;
+        transform: none !important;
+        transition: none !important;
+    }
+}
+
 @media (max-width: 480px) {
     .container {
         padding: 0 16px;
